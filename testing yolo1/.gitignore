@@ -1,1 +1,3 @@
 alerts/images/CRIME*.jpg
+alerts/metadata/CRIME*.json
+alerts/daily_logs/*.json
