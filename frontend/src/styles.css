@@ -1,0 +1,440 @@
+:root {
+  color-scheme: dark;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #050711;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #050711;
+  padding: 0;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+/* Login Page */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #050711;
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  border: 1px solid #2a3f5f;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 149, 255, 0.1);
+}
+
+.login-card :where(.ant-card-head) {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  border-bottom: 1px solid #0052cc;
+  padding: 24px;
+}
+
+.login-card :where(.ant-card-body) {
+  padding: 32px;
+}
+
+.login-card :where(.ant-btn-primary) {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  border: none;
+  margin-top: 16px;
+}
+
+/* App Shell Layout */
+.app-shell {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.ant-layout {
+  background-color: #050711;
+  min-height: 100vh;
+}
+
+.ant-layout-sider {
+  background: linear-gradient(180deg, #0f1419 0%, #1a1f2e 100%);
+  border-right: 1px solid #2a3f5f;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.ant-layout-sider-trigger {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  color: white;
+}
+
+.logo {
+  padding: 24px 16px;
+  color: #00d4ff;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.ant-menu {
+  background: transparent !important;
+  border-right: none !important;
+}
+
+.ant-menu-item {
+  background: transparent !important;
+  color: #b3b3b3 !important;
+  margin: 8px 12px !important;
+  border-radius: 6px !important;
+  transition: all 0.3s ease !important;
+}
+
+.ant-menu-item:hover {
+  background: rgba(0, 149, 255, 0.1) !important;
+  color: #00d4ff !important;
+}
+
+.ant-menu-item-selected {
+  background: linear-gradient(135deg, rgba(0, 82, 204, 0.2) 0%, rgba(0, 102, 255, 0.2) 100%) !important;
+  color: #00d4ff !important;
+  border-radius: 6px !important;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px !important;
+  background: linear-gradient(90deg, #0f1419 0%, #1a1f2e 100%);
+  border-bottom: 1px solid #2a3f5f;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  height: auto !important;
+  min-height: 60px;
+}
+
+.app-header h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.app-content {
+  padding: 32px 40px;
+  background-color: #050711;
+  min-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+/* Cards and Components */
+.ant-card {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  border: 1px solid #2a3f5f;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.ant-card-head {
+  background: rgba(0, 82, 204, 0.1);
+  border-bottom: 1px solid #2a3f5f;
+  padding: 16px 20px;
+}
+
+.ant-card-body {
+  padding: 20px;
+}
+
+.sidebar-card {
+  position: sticky;
+  top: 32px;
+}
+
+/* Video Feed */
+.live-video-card {
+  aspect-ratio: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.live-video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  background: rgba(0, 82, 204, 0.05);
+  border-bottom: 1px solid #2a3f5f;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.live-video-header h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #00d4ff;
+}
+
+.live-video-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.live-video-body h4 {
+  margin: 0;
+  color: #fff;
+}
+
+.video-frame {
+  width: 100%;
+  background: #000;
+  border: 1px solid #2a3f5f;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.video-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.video-footer {
+  font-size: 12px;
+  color: #b3b3b3;
+  padding-top: 12px;
+  border-top: 1px solid rgba(42, 63, 95, 0.5);
+}
+
+/* Metrics Grid */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.metric-card {
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(0, 82, 204, 0.05) 0%, rgba(0, 102, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 149, 255, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: #00d4ff;
+  margin: 8px 0;
+}
+
+.metric-label {
+  font-size: 12px;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Buttons */
+.ant-btn-primary {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+  border: none;
+}
+
+.ant-btn-primary:hover {
+  background: linear-gradient(135deg, #0066ff 0%, #0077ff 100%);
+  border: none;
+}
+
+.ant-btn-default {
+  background: transparent;
+  border: 1px solid #2a3f5f;
+  color: #00d4ff;
+}
+
+.ant-btn-default:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+}
+
+/* Status Badge */
+.status-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.running {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.status-badge.stopped {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+/* Table */
+.ant-table {
+  background: transparent;
+  color: #b3b3b3;
+}
+
+.ant-table-thead > tr > th {
+  background: rgba(0, 82, 204, 0.1);
+  border-bottom: 1px solid #2a3f5f;
+  color: #00d4ff;
+  font-weight: 600;
+}
+
+.ant-table-tbody > tr {
+  border-bottom: 1px solid rgba(42, 63, 95, 0.5);
+}
+
+.ant-table-tbody > tr:hover > td {
+  background: rgba(0, 82, 204, 0.05);
+}
+
+/* Alerts Panel */
+.alerts-card h4 {
+  margin: 0 0 16px 0;
+  color: #fff;
+}
+
+.ant-collapse {
+  background: transparent;
+  border: 1px solid #2a3f5f;
+  border-radius: 8px;
+}
+
+.ant-collapse-header {
+  color: #b3b3b3 !important;
+  padding: 16px !important;
+  font-weight: 500;
+}
+
+.ant-collapse-header:hover {
+  color: #00d4ff !important;
+}
+
+.ant-collapse-content {
+  background: rgba(0, 82, 204, 0.05) !important;
+  border-top: 1px solid #2a3f5f !important;
+}
+
+.ant-notification-notice {
+  background: linear-gradient(135deg, #0f1419 0%, #1a1f2e 100%);
+  border: 1px solid #2a3f5f;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Forms */
+.ant-form-item label {
+  color: #b3b3b3 !important;
+}
+
+.ant-input,
+.ant-input-number,
+.ant-select {
+  background: rgba(15, 20, 25, 0.8) !important;
+  border: 1px solid #2a3f5f !important;
+  color: #b3b3b3 !important;
+}
+
+.ant-input:hover,
+.ant-input-number:hover,
+.ant-select:hover {
+  border-color: #00d4ff !important;
+}
+
+.ant-input:focus,
+.ant-input-number:focus,
+.ant-select:focus {
+  border-color: #0066ff !important;
+  box-shadow: 0 0 0 2px rgba(0, 102, 255, 0.2) !important;
+}
+
+/* Sliders */
+.ant-slider-track {
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+}
+
+.ant-slider-handle {
+  border-color: #0066ff;
+  background: linear-gradient(135deg, #0052cc 0%, #0066ff 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-content {
+    padding: 16px 20px;
+  }
+
+  .app-header {
+    padding: 12px 16px !important;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .ant-layout-sider {
+    width: 200px !important;
+  }
+
+  .sidebar-card {
+    position: static;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .app-content {
+    padding: 12px 16px;
+  }
+
+  .ant-layout-sider {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    z-index: 10;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}

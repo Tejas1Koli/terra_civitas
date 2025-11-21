@@ -1,0 +1,13 @@
+# Alert data files
+alerts/images/CRIME*.jpg
+alerts/metadata/CRIME*.json
+alerts/daily_logs/*.json
+
+# Verified alerts data files
+verified_alerts/images/CRIME*.jpg
+verified_alerts/metadata/CRIME*.json
+
+# Database files
+*.db
+.env
+.env.local

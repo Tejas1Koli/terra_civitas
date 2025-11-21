@@ -1,0 +1,10 @@
+INFO:     Started server process [24203]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+2025-11-16 18:06:03.545 Python[24203:10420439] 2025-11-16 18:06:03.544700 [W:onnxruntime:, coreml_execution_provider.cc:113 GetCapability] CoreMLExecutionProvider::GetCapability, number of partitions supported by CoreML: 3 number of nodes in the graph: 233 number of nodes supported by CoreML: 230
+✅ CCTV Crime Detector initialized on GPU (Metal)
+✅ Alert logger initialized at: /Users/tejaskoli/testing yolo1/alerts
+INFO:     127.0.0.1:49545 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49701 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49877 - "POST /live/control HTTP/1.1" 401 Unauthorized
